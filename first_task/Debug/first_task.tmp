@@ -1,0 +1,49 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega16"</DEVICE>
+ <WORKING_DIR>C:\Users\helge\assembler\first_task\first_task\first_task\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m16def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\helge\assembler\first_task\first_task\first_task\Debug/first_task.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>first_task.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>first_task.map</FILE>
+  <FILE>first_task.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <Start><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>50</LINE></Start>
+  <MIN_FUNCTION><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>61</LINE></MIN_FUNCTION>
+  <CHOOSE_REG><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>120</LINE></CHOOSE_REG>
+  <R16_Z_INC><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>70</LINE></R16_Z_INC>
+  <R17_M><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>74</LINE></R17_M>
+  <R17_Z_INC><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>81</LINE></R17_Z_INC>
+  <R18_M><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>84</LINE></R18_M>
+  <R18_Z_INC><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>91</LINE></R18_Z_INC>
+  <R19_M><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>94</LINE></R19_M>
+  <R19_Z_INC><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>101</LINE></R19_Z_INC>
+  <R20_M><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>104</LINE></R20_M>
+  <R20_Z_INC><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>111</LINE></R20_Z_INC>
+  <CHECK><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>114</LINE></CHECK>
+  <CLR_REG><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>145</LINE></CLR_REG>
+  <M1><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>127</LINE></M1>
+  <END><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>143</LINE></END>
+  <M2><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>132</LINE></M2>
+  <M3><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>137</LINE></M3>
+  <M4><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>142</LINE></M4>
+  <CLR_R16><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>157</LINE></CLR_R16>
+  <CLR_R17><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>158</LINE></CLR_R17>
+  <CLR_R18><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>159</LINE></CLR_R18>
+  <CLR_R19><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>160</LINE></CLR_R19>
+  <CLR_R20><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>161</LINE></CLR_R20>
+ </LABELS>
+</ASSEMBLER_INFO>
