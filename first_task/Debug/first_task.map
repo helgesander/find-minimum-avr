@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.57  C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm Fri Oct 27 00:03:47 2023
+AVRASM ver. 2.1.57  C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm Sat Oct 28 15:53:07 2023
 
 
 EQU  SIGNATURE_000 0000001e
@@ -635,7 +635,8 @@ CSEG M2           00000056
 CSEG M3           0000005c
 CSEG M4           00000062
 CSEG CLR_R16      00000071
-CSEG CLR_R17      00000072
-CSEG CLR_R18      00000073
-CSEG CLR_R19      00000074
-CSEG CLR_R20      00000075
+CSEG CLR_R17      00000073
+CSEG CLR_R18      00000075
+CSEG CLR_R19      00000077
+CSEG CLR_R20      00000079
+CSEG CLR_END      0000007a

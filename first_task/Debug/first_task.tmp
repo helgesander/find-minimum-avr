@@ -41,9 +41,10 @@
   <M3><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>137</LINE></M3>
   <M4><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>142</LINE></M4>
   <CLR_R16><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>157</LINE></CLR_R16>
-  <CLR_R17><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>158</LINE></CLR_R17>
-  <CLR_R18><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>159</LINE></CLR_R18>
-  <CLR_R19><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>160</LINE></CLR_R19>
-  <CLR_R20><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>161</LINE></CLR_R20>
+  <CLR_R17><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>160</LINE></CLR_R17>
+  <CLR_R18><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>163</LINE></CLR_R18>
+  <CLR_R19><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>166</LINE></CLR_R19>
+  <CLR_R20><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>169</LINE></CLR_R20>
+  <CLR_END><FILE>C:\Users\helge\assembler\first_task\first_task\first_task\first_task.asm</FILE><LINE>171</LINE></CLR_END>
  </LABELS>
 </ASSEMBLER_INFO>

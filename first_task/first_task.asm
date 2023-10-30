@@ -10,29 +10,24 @@
  */ 
 
 
-.include "m16def.inc" ; Используем ATMega16
-.equ R16_ADDR = 0x10
-.equ R17_ADDR = 0x11
-.equ R18_ADDR = 0x12
-.equ R19_ADDR = 0x13
-.equ R20_ADDR = 0x14
-.equ BITS = 0b11111
-.def ARG_REG = R22
-.def ZERO = R24
-.def arg = R21
-.def ZERO_BITS = R27
-.def COUNT_OF_ZEROS = R28
+.include "m16def.inc" 
+.equ R16_ADDR = 0x10 ;
+.equ R17_ADDR = 0x11 ;
+.equ R18_ADDR = 0x12 ; -> адреса регистров
+.equ R19_ADDR = 0x13 ;
+.equ R20_ADDR = 0x14 ;
+.equ BITS = 0b11111	 ; 
+.def ARG_REG = R22	 ; регистр, где мы храним адрес регистра с минимальным значением, который потом очищается 
+.def ZERO = R24		 ; тупа ноль
+.def arg = R21       ; сюда кладем значение минимального регистра, которое потом может быть очищено 
+.def ZERO_BITS = R27 ; биты, которые показывают обнуленные регистры (если 0, значит регистр пустой, 1 - не пустой) 
+.def COUNT_OF_ZEROS = R28 ; переменная, которая используется в цикле (если равно 5, уходим в начало) 
 ; MACRO ===================================================
 
-.MACRO CHANGE_ARG
-	lds arg, @0
-	ldi ARG_REG, @0
+.MACRO CHANGE_ARG   ;
+	lds arg, @0     ; -> макрос для изменения регистра и его адреса, чтобы его потом очистить 
+	ldi ARG_REG, @0 ;
 .ENDM
-
-; RAM =====================================================
-
-.DSEG 
-
 
 ; FLASH ===================================================
 
@@ -48,11 +43,11 @@ out SPH, R16
 
  ; Инициализация пяти чисел 
 Start: 
-	 ldi R16, 250
-	 ldi R17, 77
-	 ldi R18, 153
-	 ldi R19, 122
-	 ldi R20, 177
+	 ldi R16, 250  ;
+	 ldi R17, 77   ;
+	 ldi R18, 153  ; -> загружаем числа в регистры 
+	 ldi R19, 122  ;
+	 ldi R20, 177  ;
 	 clr ZERO  
 	 ldi ZERO_BITS, 31
 	 call MIN_FUNCTION
@@ -62,12 +57,12 @@ MIN_FUNCTION:
 	clr COUNT_OF_ZEROS ; во время цикла считаем количество нулей, когда все регистры с нулем, то выходим из функции
 	call CHOOSE_REG
 	cp R16, ZERO
-	breq R16_Z_INC
-	cp arg, R16
+	breq R16_Z_INC ; прыгаем сюда, если регистр равен нулю (чтобы не уйти в вечный цикл)
+	cp arg, R16    
 	brcs R17_M
 	CHANGE_ARG R16_ADDR
 	rjmp R17_M
-R16_Z_INC: 
+R16_Z_INC:  ; в метках с пободным названием происходит
 	inc COUNT_OF_ZEROS
 	subi ZERO_BITS, 16
 
@@ -111,15 +106,15 @@ R20_M:
 R20_Z_INC: 
 	inc COUNT_OF_ZEROS
 	subi ZERO_BITS, 1
-CHECK: 
+CHECK:  ; метка, в которой вызывается функция очищения регистра и проверяется, все ли регистры мы обнулили 
 	call CLR_REG
 	cpi COUNT_OF_ZEROS, 5
 	brcs MIN_FUNCTION
 	ret
 
-CHOOSE_REG: ; выбираем не нулевой регистр, с которым мы будем сравнивать остальные 
+; Функция для выбора регистра, который мы будем сравнивать с остальными в поисках минимального 
+CHOOSE_REG: 
 	mov R26, ZERO_BITS
-	andi R26, BITS
 	cpi R26, 16 
 	brcs M1
 	CHANGE_ARG R16_ADDR
@@ -142,6 +137,8 @@ M3:
 M4: CHANGE_ARG R20_ADDR
 END: ret 
 
+
+; Функция для очищения регистра, который мы сохранили с помощью CHANGE_ARG
 CLR_REG:
 	subi ARG_REG, 0xF
 	cpi ARG_REG, 1 
@@ -154,9 +151,18 @@ CLR_REG:
 	breq CLR_R19
 	cpi ARG_REG, 5
 	breq CLR_R20
-CLR_R16: clr R16
-CLR_R17: clr R17
-CLR_R18: clr R18
-CLR_R19: clr R19
-CLR_R20: clr R20
-	ret 
+CLR_R16: 
+	clr R16
+	rjmp CLR_END
+CLR_R17: 
+	clr R17
+	rjmp CLR_END
+CLR_R18: 
+	clr R18
+	rjmp CLR_END
+CLR_R19: 
+	clr R19
+	rjmp CLR_END
+CLR_R20: 
+	clr R20
+CLR_END: ret 
